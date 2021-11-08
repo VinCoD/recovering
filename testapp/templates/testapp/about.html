@@ -1,4 +1,4 @@
-{% extends 'testapp/index.html' %}
+{% extends 'testapp/base.html' %}
 {% block title %}
 <title>About Us</title>
 {% endblock %}
@@ -9,6 +9,6 @@
     
     <p>{{new.body}}</p>
 {% empty %}
-    <p>No authors yet !!</p>
+    <p>No contributions yet !!</p>
 {% endfor %}
 {% endblock %}
