@@ -28,3 +28,11 @@ class Relative(models.Model):
 
     def __str__(self):
         return self.meeting
+
+class Remark(models.Model):
+    subject = models.CharField(max_length=100, null=True)
+    name = models.ForeignKey(Test, on_delete=models.CASCADE)
+    content = models.TextField(max_length=250)
+
+    def __str__(self):
+        return self.subject

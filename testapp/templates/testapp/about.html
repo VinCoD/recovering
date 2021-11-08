@@ -4,5 +4,11 @@
 {% endblock %}
 
 {% block content %}
-<p>Hello Worlds</p>
+ {% for new in news%}
+    <h1>{{new.title}}</h1>
+    
+    <p>{{new.body}}</p>
+{% empty %}
+    <p>No authors yet !!</p>
+{% endfor %}
 {% endblock %}

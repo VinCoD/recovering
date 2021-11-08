@@ -8,5 +8,8 @@ def index(request):
     context = {'tests':tests}
     return render(request, 'testapp/index.html', context)
 
-def about(request):
-    return render(request, 'testapp/about.html')
+def about(request, index_id):
+    tests = Test.objects.get(id = index_id)
+    news = tests.new_set.order_by('-time_added')
+    context = {"news": news, "tests":tests}
+    return render(request, 'testapp/about.html', context)
