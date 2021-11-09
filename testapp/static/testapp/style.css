@@ -1,3 +1,17 @@
 body{
-    background-color: cyan;
+    background-color: rgba(0, 128, 0, 0.364);
+}
+
+.links{
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.links >a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
 }
