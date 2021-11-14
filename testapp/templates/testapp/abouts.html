@@ -10,13 +10,14 @@
     {%endblock%}
 </head>
 <body>
-    <div class="test">
-        {% block content %}
-        {% for test in tests %}
-            <p>{{test}}</p>
-        {% endfor %}
+    {% block content %}
+      {% for about in tests %}
+      <li>
+          <a href="{% url 'testapp:about' about.id %}">{{ about }}</a>
+      </li>
+      {% endfor %}
     {% endblock %}
-    </div>
+
     
 </body>
 </html>

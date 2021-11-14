@@ -13,10 +13,11 @@ def index(request):
 
 
 
-def about(request, index_id):
-    tests = Test.objects.get(id = index_id)
-    news = tests.new_set.order_by('-time_added')
-    context = {"news": news, "tests":tests}
+def about(request, about_id):
+    about = Test.objects.get(id=about_id)
+    news = about.new_set.order_by('-time_added')
+    context = {"about":about, "news": news}
+
     return render(request, 'testapp/about.html', context)
 
 

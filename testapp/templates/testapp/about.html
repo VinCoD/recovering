@@ -4,11 +4,15 @@
 {% endblock %}
 
 {% block content %}
+
+<p>{{ about }}</p>
  {% for new in news%}
-    <h1>{{new.title}}</h1>
-    
-    <p>{{new.body}}</p>
-{% empty %}
-    <p>No contributions yet !!</p>
-{% endfor %}
+<ul>
+   <li>
+      <p>{{ new.time_added }}</p>
+      <p>{{ new.title }}</p>
+      <p>{{ new.body }}</p>
+   </li>
+</ul>
+ {% endfor %}
 {% endblock %}

@@ -3,15 +3,29 @@ body{
 }
 
 .links{
-    display: inline-block;
+    display: flex;
     justify-content: center;
     align-items: center;
+    gap: 10px;
 
 }
 
 .links >a{
     text-decoration: none;
-    color: white;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+    font-family: 'Mochiy Pop P One', sans-serif;
 
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.container h1{
+    background-color: rgba(0, 0, 0, 0.364);
+    width: 40vw;
+}
+.container p{
+    background-color: rgba(0, 0, 0, 0.364);
+    width: 60vw;
 }
